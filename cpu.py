@@ -53,7 +53,14 @@ class CPU:
         return instruction
     
     def decode(self, instruction):
-        pass
+        opcode_map = {
+            0x90: "NOP",
+            0xB8: "MOV_reg_imm",
+            0xE9: "JMP_near_rel",
+            0xEB: "JMP_short",
+            0xF4: "HLT",
+
+        }
 
     def execute(self, instruction):
         pass
