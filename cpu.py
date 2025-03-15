@@ -1,3 +1,5 @@
+from memory import Memory 
+
 class CPU:
     def __init__(self):
         # General purpose registers
@@ -23,6 +25,9 @@ class CPU:
 
         # Flags
         self.FLAGS = 0
+
+        # Memory
+        self.memory = Memory()
 
     def __str__(self):
         return (f"AX: {self.AX:08X}, BX: {self.BX:08X}, CX: {self.CX:08X}, DX: {self.DX:08X}\n"
