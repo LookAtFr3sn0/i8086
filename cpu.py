@@ -3,25 +3,25 @@ from memory import Memory
 class CPU:
     def __init__(self):
         # General purpose registers
-        self.AX = 0
-        self.BX = 0
-        self.CX = 0
-        self.DX = 0
+        self.AX = 0 # Primary Accumulator
+        self.BX = 0 # Base register
+        self.CX = 0 # Counter register
+        self.DX = 0 # Extended Accumulator
 
         # Index registers
-        self.SI = 0
-        self.DI = 0
-        self.BP = 0
-        self.SP = 0
+        self.SI = 0 # Source Index
+        self.DI = 0 # Destination Index
+        self.BP = 0 # Base Pointer
+        self.SP = 0 # Stack Pointer
 
         # Program counter
-        self.IP = 0
+        self.IP = 0 # Instruction Pointer
 
         # Segment registers
-        self.CS = 0
-        self.DS = 0
-        self.ES = 0
-        self.SS = 0
+        self.CS = 0 # Code Segment
+        self.DS = 0 # Data Segment
+        self.ES = 0 # Extra Segment
+        self.SS = 0 # Stack Segment
 
         # Flags
         self.FLAGS = 0
