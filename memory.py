@@ -18,6 +18,9 @@ class Memory:
         high = (value >> 8) & 0xFF
         self.memory[address] = low
         self.memory[address + 1] = high
+
+    def reset(self):
+        self.memory = bytearray(1024 * 1024)
     
     def __str__(self):
         lines = []

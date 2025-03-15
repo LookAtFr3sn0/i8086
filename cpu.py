@@ -29,6 +29,23 @@ class CPU:
         # Memory
         self.memory = Memory()
 
+    def reset(self):
+        self.AX = 0
+        self.BX = 0
+        self.CX = 0
+        self.DX = 0
+        self.SI = 0
+        self.DI = 0
+        self.BP = 0
+        self.SP = 0
+        self.IP = 0
+        self.CS = 0
+        self.DS = 0
+        self.ES = 0
+        self.SS = 0
+        self.FLAGS = 0
+        self.memory.reset()
+
     def __str__(self):
         return (f"AX: {self.AX:08X}, BX: {self.BX:08X}, CX: {self.CX:08X}, DX: {self.DX:08X}\n"
         f"CS: {self.CS:08X}, DS: {self.DS:08X}, SS: {self.SS:08X}, ES: {self.ES:08X}\n"
