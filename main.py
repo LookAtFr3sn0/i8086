@@ -7,7 +7,7 @@ class Main:
     def run(self):
         pass
 
-    def run_once(self):
+    def run_next(self):
         pass
 
 if __name__ == "__main__":
