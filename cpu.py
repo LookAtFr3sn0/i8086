@@ -46,6 +46,18 @@ class CPU:
         self.FLAGS = 0
         self.memory.reset()
 
+    def fetch(self):
+        address = self.IP
+        instruction = self.memory.read_byte(address)
+        self.IP += 1
+        return instruction
+    
+    def decode(self, instruction):
+        pass
+
+    def execute(self, instruction):
+        pass
+
     def __str__(self):
         return (f"AX: {self.AX:08X}, BX: {self.BX:08X}, CX: {self.CX:08X}, DX: {self.DX:08X}\n"
         f"CS: {self.CS:08X}, DS: {self.DS:08X}, SS: {self.SS:08X}, ES: {self.ES:08X}\n"
